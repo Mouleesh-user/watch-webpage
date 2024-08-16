@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolex Watches</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            color: #333;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('wp2149340.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            opacity: 1; /* Reduced opacity */
+            z-index: -1;
+        }
+        .header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+        .container {
+            padding: 50px 20px;
+            margin: 20px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+        }
+        .watch-section {
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+            text-align: center;
+        }
+        .watch-section img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .watch-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        .watch-section h2 {
+            margin: 20px 0;
+            font-size: 36px;
+            color: white;
+        }
+        .watch-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            color: white;
+        }
+        .watch-details {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+        }
+        .watch-details h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .watch-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .watch-details li {
+            font-size: 18px;
+            line-height: 1.6;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="header">
+        <h1>Rolex Watches</h1>
+    </div>
+
+    <div class="container">
+        <!-- Rolex Submariner -->
+        <div class="watch-section">
+            <img src="omega.jpg" alt="Rolex Submariner" onclick="openModal('Rolex Submariner', 'The Rolex Submariner is a classic dive watch known for its robustness and iconic design. It is a symbol of adventure and excellence.', 'Case: Oystersteel, Diameter: 41 mm, Water Resistance: 300 meters, Movement: Perpetual, mechanical, self-winding, Crystal: Sapphire')">
+            <h2>Rolex Submariner</h2>
+            <p>The Rolex Submariner is a classic dive watch known for its robustness and iconic design. It is a symbol of adventure and excellence.</p>
+        </div>
+
+        <!-- Omega Seamaster -->
+        <div class="watch-section">
+            <img src="rolex.jpg" alt="Omega Seamaster" onclick="openModal('Omega Seamaster', 'Elegant and timeless design, perfect for any occasion. Experience the legacy of precision and craftsmanship with the Omega Seamaster.', 'Case: Stainless Steel, Diameter: 42 mm, Water Resistance: 300 meters, Movement: Automatic, Crystal: Sapphire')">
+            <h2>Omega Seamaster</h2>
+            <p>Elegant and timeless design, perfect for any occasion. Experience the legacy of precision and craftsmanship with the Omega Seamaster.</p>
+        </div>
+
+        <!-- Tag Heuer Carrera -->
+        <div class="watch-section">
+            <img src="watch.jpg" alt="Tag Heuer Carrera" onclick="openModal('Tag Heuer Carrera', 'The Tag Heuer Carrera blends elegance and sportiness. It is designed for those who demand both style and performance.', 'Case: Stainless Steel, Diameter: 43 mm, Water Resistance: 100 meters, Movement: Automatic, Crystal: Sapphire')">
+            <h2>Tag Heuer Carrera</h2>
+            <p>The Tag Heuer Carrera blends elegance and sportiness. It is designed for those who demand both style and performance.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Rolex Watches. All rights reserved.</p>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <h3>Specifications:</h3>
+            <ul id="modalSpecifications"></ul>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, description, specifications) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDescription').innerText = description;
+
+            const specsList = document.getElementById('modalSpecifications');
+            specsList.innerHTML = '';
+            specifications.split(', ').forEach(spec => {
+                const li = document.createElement('li');
+                li.innerText = spec;
+                specsList.appendChild(li);
+            });
+
+            document.getElementById('myModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
